@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "c012529f-fc88-43d5-8cb6-6ff7885f21b0",
+		"name": "travel-service-api-data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9580265"
+	},
+	"item": [
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "getAllCities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addnewCIty",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cityName\":\"Mathura\",\r\n    \"stateName\": \"UttarPradesh\",\r\n    \"countryName\":\"India\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCityList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"cityName\": \"Mathura\",\r\n        \"stateName\": \"UttarPradesh\",\r\n        \"countryName\": \"India\"\r\n    },\r\n    {\r\n        \"cityName\": \"Vrindavan\",\r\n        \"stateName\": \"UttarPradesh\",\r\n        \"countryName\": \"India\"\r\n    },\r\n    {\r\n        \"cityName\": \"Barsana\",\r\n        \"stateName\": \"UttarPradesh\",\r\n        \"countryName\": \"India\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cities/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cities",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TravelPackages",
+			"item": [
+				{
+					"name": "createTravelPackage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"packageName\":\"krishna leela\"\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/travelpackages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"travelpackages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPackages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/travelpackages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"travelpackages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createTravelPackagesList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"packageName\": \"krishna leela\"\r\n    },\r\n    {\r\n        \"packageName\": \"Shri Ram leela\"\r\n    },\r\n    {\r\n        \"packageName\": \"Beautiful Rajasthan\"\r\n    },\r\n    {\r\n        \"packageName\": \"Chhatrapati Shivaji Maharaj\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/travelpackages/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"travelpackages",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TravelPackageCityManager",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/travelPackageCityManagers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"travelPackageCityManagers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"travelPackageId\": 1,\r\n        \"cityId\": 1\r\n    },\r\n    {\r\n        \"travelPackageId\": 1,\r\n        \"cityId\": 2\r\n    },\r\n    {\r\n        \"travelPackageId\": 1,\r\n        \"cityId\": 3\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/travelPackageCityManagers/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"travelPackageCityManagers",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PackageEvent",
+			"item": [
+				{
+					"name": "createInList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n{\r\n    \"travelPackageId\": 1,\r\n    \"startDate\": \"30-09-2023\",\r\n    \"endDate\": \"05-10-2023\"\r\n},\r\n{\r\n    \"travelPackageId\": 1,\r\n    \"startDate\": \"30-10-2023\",\r\n    \"endDate\": \"05-11-2023\"\r\n},\r\n{\r\n    \"travelPackageId\": 1,\r\n    \"startDate\": \"30-01-2023\",\r\n    \"endDate\": \"05-02-2023\"\r\n}\r\n\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/packageEvents/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"packageEvents",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/packageEvents/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"packageEvents",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
